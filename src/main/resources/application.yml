@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: local
+    
+  application:
+    name: API-User
+    
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.2.136:1433;database=Home;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: sa
+    password: Bayan!1436
+    
+  thymeleaf:
+    cache: false
+    enabled: true 
+    prefix: classpath:/templates/
+    suffix: .html
+    
+  sql:
+    init:
+      mode: always
+  
+  jpa:
+    show-sql: true
+ 
+server:
+  port: 8080
